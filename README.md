@@ -27,4 +27,4 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypas
 Al hacer esto se puede hacer doble click sobre el acceso directo y con eso ya se ejecutaría el programa, al terminar saltará un pop up diciendo que se ejecutó el script
 satisfactoriamente.
 
-ATENCIóN, EN CASO DE QUE NO SE PONGA ESA LíNEA EN EL EJECUTABLE EL PROGRAMA VA A DAR ERROR POR LAS VARIABLES DE SISTEMA USADAS EN EL MISMO 
+|ATENCIóN, EN CASO DE QUE NO SE PONGA ESA LíNEA EN EL EJECUTABLE EL PROGRAMA VA A DAR ERROR POR LAS VARIABLES DE SISTEMA USADAS EN EL MISMO|
