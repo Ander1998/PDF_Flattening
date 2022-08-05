@@ -43,3 +43,4 @@ foreach ($value in $values) {
     }
     $cont++
 }
+powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Se ha completado el flattening de los pdf','PDF_Flatten')}"
