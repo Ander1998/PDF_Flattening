@@ -1,5 +1,11 @@
 # PDF_Flattening
 
+## Requisitos
+
+-PDFTK Server
+
+-Powershell
+
 ## Descripción
 
 El programa sirve para poder autocompletar pdfs de la seguridad social usando plantillas y archivos fdf como origen de los datos.
@@ -17,9 +23,3 @@ mismo:
 C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "%userprofile%\Ruta_en_la_que_se_encuentre_el_ps1\PDF_Flattening.ps1"
 
 ```
-
-## Requisitos
-
--PDFTK Server
-
--Powershell
