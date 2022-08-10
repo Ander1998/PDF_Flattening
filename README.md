@@ -4,7 +4,15 @@
 
 -PDFTK Server
 
+```bash
+https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-win-setup.exe
+```
+
 -Powershell
+
+```bash
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#zip
+```
 
 ## Descripción
 
