@@ -24,6 +24,7 @@
 $fdfs = $HOME
 $values = Get-ChildItem -Path $fdfs -Filter *.fdf -File -Name -Recurse
 $cont = 0
+$saltolinea = '------------------------------------------------------------------------------------------------------------------------'
 #------------------------------------------------------------------[Programa]------------------------------------------------------
 
 # Con un foreach se recorre el array de fdfs que se ha encontrado en el equipo
@@ -67,21 +68,29 @@ foreach ($value in $values) {
             New-Item $PSScriptRoot+'\Error_Log.txt'
         }
         $plantilla = $(Split-Path $entrada -leaf)
+        $hora | Out-File -FilePath .\Error_Log.txt -Append
         'La plantilla ' + $plantilla + ' que se quiere usar no existe' | Out-File -FilePath .\Error_Log.txt -Append
+        $saltolinea | Out-File -FilePath .\Error_Log.txt -Append
+        # Al .
+        powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('La plantilla ' + $plantilla + ' que se quiere usar no existe','PDF_Flatten')}"
     }
     # En caso de que todo haya ido bien y se haya creado el pdf el programa elimina el fdf de origen
     if([System.IO.File]::Exists($out)) {
         Remove-Item $ruta
+        # Al terminar saltará un pop up diciendo que se ejecutó el script satisfactoriamente.
+        powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Se ha completado el flattening de los pdf','PDF_Flatten')}"
     }
     # En caso contrario anota en el error log el problema que ha habido
     else {
         if($null -eq $PSScriptRoot+'\Error_Log.txt') {
             New-Item $PSScriptRoot+'\Error_Log.txt'
         }
-        $Error | Out-File -FilePath .\Error_Log.txt -Append    
+        $hora | Out-File -FilePath .\Error_Log.txt -Append
+        $Error | Out-File -FilePath .\Error_Log.txt -Append
+        $saltolinea | Out-File -FilePath .\Error_Log.txt -Append
+        # Al terminar saltará un pop up diciendo que hubo un problema.
+        powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Ha habido un error en la ejecución del programa, por favor revisa el log de errores','PDF_Flatten')}"    
     }
     # suma 1 a la variable contadora para en la siguiente iteración poder usarlo a la hora de asignar valor a $ruta.
     $cont++
 }
-# Al terminar saltará un pop up diciendo que se ejecutó el script satisfactoriamente.
-powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Se ha completado el flattening de los pdf','PDF_Flatten')}"
