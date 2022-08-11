@@ -24,13 +24,14 @@ Busca en C:\Users\'Usuario que ejecuta el script' entero todos los archivos que 
 
 ## Como usarlo
 
-Ejecutar haciendo botón derecho, ejecutar con powershell sobre el archivo `PDF_Flattening.ps1`.
+Ejecutar el .exe haciendo doble click sobre este.
+
 ![Screenshot](ejecutar.png)
- El fichero puede estar en cualquier carpeta. Alternativamente se puede
-crear un acceso directo donde se desee indicando en el destino(target) del
-mismo:
 
-```bash
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "%userprofile%\Ruta_en_la_que_se_encuentre_el_ps1\PDF_Flattening.ps1"
+ La carpeta del PDF_Flattening puede ser almacenada en cualquier destino dentro del PC y se puede ejecutar accediendo a esa ruta y haciendo doble click sobre el .exe o crear un acceso directo del mismo y tenerlo así más acesible dejando el acceso directo donde se quiera, en el escritorio por ejemplo.
 
-```
+ ![Screenshot](accesodirecto.png)
+
+**ATENCIÓN**
+
+**Una vez dejado la carpeta de PDF_Flattening en un directorio y creado el acceso directo, en caso de mover dicha carpeta de lugar el acceso directo dejará de funcionar. En ese caso bastaría con volver a crear el acceso directo.**

@@ -1,3 +1,36 @@
+﻿##[Ps1 To Exe]
+##
+##Kd3HDZOFADWE8uK1
+##Nc3NCtDXThU=
+##Kd3HFJGZHWLWoLaVvnQnhQ==
+##LM/RF4eFHHGZ7/K1
+##K8rLFtDXTiW5
+##OsHQCZGeTiiZ4tI=
+##OcrLFtDXTiW5
+##LM/BD5WYTiiZ4tI=
+##McvWDJ+OTiiZ49I=
+##OMvOC56PFnzN8u+Vs1Q=
+##M9jHFoeYB2Hc8u+Vs1Q=
+##PdrWFpmIG2HcofKIo2QX
+##OMfRFJyLFzWE8uK1
+##KsfMAp/KUzWJ0g==
+##OsfOAYaPHGbQvbyVvnQX
+##LNzNAIWJGmPcoKHc7Do3uAuO
+##LNzNAIWJGnvYv7eVvnQX
+##M9zLA5mED3nfu77Q7TV64AuzAgg=
+##NcDWAYKED3nfu77Q7TV64AuzAgg=
+##OMvRB4KDHmHQvbyVvnQX
+##P8HPFJGEFzWE8tI=
+##KNzDAJWHD2fS8u+Vgw==
+##P8HSHYKDCX3N8u+Vgw==
+##LNzLEpGeC3fMu77Ro2k3hQ==
+##L97HB5mLAnfMu77Ro2k3hQ==
+##P8HPCZWEGmaZ7/K1
+##L8/UAdDXTlaDjofG5iZk2UrgRm05fMSWtqWb4ISv9P7jqxneQI4oeXBRqQ/wBV+pXPwbW/JV+ZESWg0jLs47xpTvPeuoUbYPnOpxbKuLvrdJ
+##Kc/BRM3KXhU=
+##
+##
+##fd6a9f26a06ea3bc99616d4851b372ba
 <#
 .SYNOPSIS
   Script creado para el flattening de pdfs de la seguridad social
@@ -31,8 +64,8 @@ $saltolinea = '-----------------------------------------------------------------
 #------------------------------------------------------------------[Programa]------------------------------------------------------
 
 if ($null -eq $values) {
-  if($null -eq $PSScriptRoot+'\Error_Log.txt') {
-    New-Item $PSScriptRoot+'\Error_Log.txt'
+  if($null -eq '.\Error_Log.txt') {
+    New-Item '.\Error_Log.txt'
   }
   'No se encuentra ningún archivo fdf en la ruta $HOME' | Out-File -FilePath .\Error_Log.txt -Append
   $horalog | Out-File -FilePath .\Error_Log.txt -Append
@@ -50,7 +83,7 @@ if ($null -eq $values) {
     # En la variable $text se guarda el contenido del fichero fdf y en $entrada se guarda la ruta del script 
     $text = Get-Content -Path $ruta
     # y se le agrega \Plantillas_PDF\ para que acceda a la subcarpeta en la que se encuentran los pdf plantilla.   
-    $entrada =$PSScriptRoot+'\Plantillas_PDF\'
+    $entrada = '.\Plantillas_PDF\'
     # En la variable hora se guarda la fecha y hora actual con año, mes, día, hora, minuto y segundo. Esto nos será util para darle nombre a los ficheros de salida.
     $hora = Get-Date -Format "yyyyMMdd_HHmmss"
     $horalog = Get-Date -Format "yyyy/MM/dd HH:mm:ss"
@@ -73,8 +106,8 @@ if ($null -eq $values) {
     # Una vez hecho lo anterior el programa comprueba que el fichero fdf contiene el nombre de los pdf plantilla,
     # en caso de que no exista comprueba que exista el log de errores, en caso negativo lo crea y añade una linea con el error.
     if (!([System.IO.File]::Exists($entrada))) {
-        if($null -eq $PSScriptRoot+'\Error_Log.txt') {
-            New-Item $PSScriptRoot+'\Error_Log.txt'
+        if($null -eq '.\Error_Log.txt') {
+            New-Item '.\Error_Log.txt'
         }
 
         #Write-Host $ruta
@@ -90,8 +123,8 @@ if ($null -eq $values) {
       Remove-Item $ruta
   } # En caso contrario anota en el error log el problema que ha habido
   else {
-      if($null -eq $PSScriptRoot+'\Error_Log.txt') {
-          New-Item $PSScriptRoot+'\Error_Log.txt'
+      if($null -eq '.\Error_Log.txt') {
+          New-Item '.\Error_Log.txt'
       }
       $horalog | Out-File -FilePath .\Error_Log.txt -Append
       $ruta | Out-File -FilePath .\Error_Log.txt -Append
@@ -106,7 +139,7 @@ if ($null -eq $values) {
 
 if ($flag -eq 0) {
   # Al terminar saltará un pop up diciendo que se ejecutó el script satisfactoriamente.
-  powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Se ha completado el flattening de los pdf','PDF_Flatten')}"
+  powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Se ha completado el flattening de los fdf','PDF_Flatten')}"
 } elseif ($flag -eq 1) {
     # Al no haber plantilla saldrá la siguiente ventana emergente.
     powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('La plantilla que se quiere usar no existe, por favor revisa el log de errores','PDF_Flatten')}"
@@ -115,5 +148,5 @@ if ($flag -eq 0) {
     powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Ha habido un error en la ejecucion del programa, por favor revisa el log de errores','PDF_Flatten')}"    
 } elseif ($flag -eq 3) {
     # Al no haber ningún archivo fdf saltará un pop up con este mensaje.
-    powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('No se encuentra ningun fdf en la ruta $HOME','PDF_Flatten')}"
+    powershell -WindowStyle hidden -Command "& {[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('No se encuentra ningun fdf en la ruta $HOME o en sus subdirectorios/carpetas','PDF_Flatten')}"
 }
