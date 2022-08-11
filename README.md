@@ -26,11 +26,11 @@ Busca en C:\Users\'Usuario que ejecuta el script' entero todos los archivos que 
 
 Ejecutar el .exe haciendo doble click sobre este.
 
-![Settings Window](https://github.com/Ander1998/PDF_Flattening/tree/secondary/Resources/ejecutar.png)
+![image](https://github.com/Ander1998/PDF_Flattening/tree/secondary/Resources/ejecutar.png)
 
  La carpeta del PDF_Flattening puede ser almacenada en cualquier destino dentro del PC y se puede ejecutar accediendo a esa ruta y haciendo doble click sobre el .exe o crear un acceso directo del mismo y tenerlo así más acesible dejando el acceso directo donde se quiera, en el escritorio por ejemplo.
 
- ![Settings Window](https://github.com/Ander1998/PDF_Flattening/tree/secondary/Resources/accesodirecto.png)
+![image](https://github.com/Ander1998/PDF_Flattening/tree/secondary/Resources/accesodirecto.png)
 
 **ATENCIÓN**
 
