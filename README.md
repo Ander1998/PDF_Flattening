@@ -26,11 +26,11 @@ Busca en C:\Users\'Usuario que ejecuta el script' entero todos los archivos que 
 
 Ejecutar el .exe haciendo doble click sobre este.
 
-![Screenshot](ejecutar.png)
+![Screenshot](Resources\ejecutar.png)
 
  La carpeta del PDF_Flattening puede ser almacenada en cualquier destino dentro del PC y se puede ejecutar accediendo a esa ruta y haciendo doble click sobre el .exe o crear un acceso directo del mismo y tenerlo así más acesible dejando el acceso directo donde se quiera, en el escritorio por ejemplo.
 
- ![Screenshot](accesodirecto.png)
+ ![Screenshot](Resources\accesodirecto.png)
 
 **ATENCIÓN**
 
