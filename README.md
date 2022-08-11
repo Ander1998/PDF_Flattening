@@ -28,13 +28,13 @@ Ejecutar el .exe haciendo doble click sobre este.
 
 
 <div align="center">
-    <img src="/Resources/ejecutar.png" width="800px"</img> 
+    <img src="/Resources/ejecutar.png" width="650px"</img> 
 </div>
 
  La carpeta del PDF_Flattening puede ser almacenada en cualquier destino dentro del PC y se puede ejecutar accediendo a esa ruta y haciendo doble click sobre el .exe o crear un acceso directo del mismo y tenerlo así más acesible dejando el acceso directo donde se quiera, en el escritorio por ejemplo.
 
 <div align="center">
-    <img src="/Resources/accesodirecto.png" width="800px"</img> 
+    <img src="/Resources/accesodirecto.png" width="650px"</img> 
 </div>
 
 **ATENCIÓN**
