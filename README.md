@@ -23,14 +23,14 @@ El programa sirve para poder autocompletar pdfs de la seguridad social usando pl
 Busca en C:\Users\'Usuario que ejecuta el script' entero todos los archivos que tengan la extensión fdf, genera los pdf con estos datos y la plantilla y elimina los fdf. En caso de que algo falle lo anota en un log de errores y no elimina el fdf.
 
 ## Como usarlo
-
+.\Resources\ejecutar.png
 Ejecutar el .exe haciendo doble click sobre este.
 
-![Screenshot](.\Resources\ejecutar.png)
+![Screenshot](https://github.com/Ander1998/PDF_Flattening/tree/secondary/Resources/ejecutar.png)
 
  La carpeta del PDF_Flattening puede ser almacenada en cualquier destino dentro del PC y se puede ejecutar accediendo a esa ruta y haciendo doble click sobre el .exe o crear un acceso directo del mismo y tenerlo así más acesible dejando el acceso directo donde se quiera, en el escritorio por ejemplo.
 
- ![Screenshot](.\Resources\accesodirecto.png)
+ ![Screenshot](https://github.com/Ander1998/PDF_Flattening/tree/secondary/Resources/accesodirecto.png)
 
 **ATENCIÓN**
 
